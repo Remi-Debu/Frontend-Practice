@@ -198,7 +198,6 @@ video {
     padding: 80px 0 80px 80px;
     display: flex;
     overflow-x: scroll;
-    width: 100%;
 }
 
 .section5 a {
@@ -232,3 +231,79 @@ video {
     margin-top: 20px;
     margin-bottom: 90px;
 }
+
+/* FOOTER  */
+
+footer {
+    margin-top: 300px;
+}
+
+footer > div:nth-child(1) {
+    color: #f4f4f4;
+    padding: 100px 100px 80px 80px;
+    background-color: #252422;
+}
+
+footer figure {
+    width: 68px;
+}
+
+footer > div:nth-child(1) > div:nth-child(1) {
+    font-size: 1.9rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    fill: #f4f4f4;
+}
+
+footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+    width: 50%;
+}
+footer > div:nth-child(1) > div:nth-child(1) > p {
+    width: 50%;
+}
+
+footer > div:nth-child(1) > div:nth-child(2) {
+    margin-top: 100px;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+    width: 50%;
+}
+footer > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div:nth-child(1) > div:nth-child(2) a {
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+footer > div:nth-child(1) > div:nth-child(2) a:hover {
+    text-decoration: underline;
+}
+
+footer > div:nth-child(2) {
+    color: #868686;
+    font-size: 0.7rem;
+    padding: 25px 80px;
+    background-color: #141412;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div:nth-child(2) a {
+    text-decoration: none;
+    color: #868686;
+}
+
+footer > div:nth-child(2) a:hover {
+    text-decoration: underline;
+}
+
