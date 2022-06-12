@@ -145,6 +145,7 @@ video {
     padding: 0 80px;
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
 }
 
 .section2Div {
@@ -153,18 +154,45 @@ video {
     margin-right: 20px;
 }
 
+.section2 a {
+    color: #252422;
+    text-decoration: none;
+}
+
 .section2DivVideo {
     width: 100%;
     height: 100%;
 }
 
+.section2Div > a > div:nth-child(1) {
+    overflow: hidden;
+}
+
 .section2cadre {
+    width: 100%;
+    height: 80%;
+    transform: scale(1.09);
+    transition-duration: 0.7s;
+}
+
+.section2cadreVideo {
     width: 100%;
     height: 80%;
 }
 
 .section2DivTexte {
     padding: 20px;
+}
+
+.section2DivTexte > h1 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.section2DivTexte > p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-right: 50%;
 }
 
 /* SECTION 3  */
@@ -187,7 +215,7 @@ video {
 /* SECTION 4  */
 
 .section4 {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     font-weight: 600;
     padding: 80px;
 }
@@ -221,7 +249,15 @@ video {
 }
 
 .section5 > div > div:nth-child(1) > img {
-    width: 120px;
+    width: auto;
+}
+
+.imgGoogle {
+    width: 120px !important;
+}
+
+.imgPatagonia {
+    width: 180px !important;
 }
 
 .section5separation {
@@ -261,6 +297,33 @@ footer > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
 }
 footer > div:nth-child(1) > div:nth-child(1) > p {
     width: 50%;
+}
+
+footer > div:nth-child(1) > div:nth-child(1) > p > a {
+    color: #f4f4f4;
+    text-decoration: none;
+    position: relative;
+}
+
+footer > div:nth-child(1) > div:nth-child(1) > p > a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%; 
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #f4f4f4;
+}
+
+footer > div:nth-child(1) > div:nth-child(1) > p > a:hover::after {
+    animation: test 3s ease 0s 1 normal backwards;
+}
+
+@keyframes test {
+    0% { width: 100%; }
+    50% { width: 0; }
+    100% { width: 100%; }
 }
 
 footer > div:nth-child(1) > div:nth-child(2) {
