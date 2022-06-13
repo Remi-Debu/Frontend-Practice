@@ -3,41 +3,68 @@ let section2VideoLink = document.querySelector(".section2DivVideo > a");
 let section2h1 = document.querySelectorAll(".section2DivTexte > h1");
 let section2cadre = document.querySelectorAll(".section2cadre");
 
-const test3 = (evenementHover, nb) => {
+let section7Link = document.querySelectorAll(".section7Link");
+let section7h2 = document.querySelectorAll(".section7DivDiv > h2");
+let section7img = document.querySelectorAll(".section7DivElement img");
+
+const changementStyleMouseOver = (evenementHover, nb, section2or7) => {
   evenementHover.preventDefault();
   evenementHover.stopPropagation();
 
-  section2h1[nb].setAttribute("style", "text-decoration: underline;");
-  if (nb != 2) {
-    section2cadre[nb].setAttribute("style", "transform: scale(1);");
+  if (section2or7 == true) {
+    section2h1[nb].setAttribute("style", "text-decoration: underline;");
+    if (nb != 2) {
+      section2cadre[nb].setAttribute("style", "transform: scale(1);");
+    }
+  } else {
+    section7h2[nb].setAttribute("style", "text-decoration: underline;");
+    if (nb != 2) {
+      section7img[nb].setAttribute("style", "transform: scale(1);");
+    }
   }
 };
 
-const test4 = (evenementHover, nb) => {
+const changementStyleMouseOut = (evenementHover, nb, section2or7) => {
   evenementHover.preventDefault();
   evenementHover.stopPropagation();
 
-  section2h1[nb].setAttribute("style", "text-decoration: none;");
-  if (nb != 2) {
-    section2cadre[nb].setAttribute("style", "transform: scale(1.09);");
+  if (section2or7 == true) {
+    section2h1[nb].setAttribute("style", "text-decoration: none;");
+    if (nb != 2) {
+      section2cadre[nb].setAttribute("style", "transform: scale(1.09);");
+    }
+  } else {
+    section7h2[nb].setAttribute("style", "text-decoration: none;");
+    if (nb != 2) {
+      section7img[nb].setAttribute("style", "transform: scale(1.09);");
+    }
   }
 };
 
 section2Link[0].addEventListener("mouseover", (evenementHover) =>
-  test3(evenementHover, 0)
+  changementStyleMouseOver(evenementHover, 0, true)
 );
 section2Link[1].addEventListener("mouseover", (evenementHover) =>
-  test3(evenementHover, 1)
+  changementStyleMouseOver(evenementHover, 1, true)
 );
 section2VideoLink.addEventListener("mouseover", (evenementHover) =>
-  test3(evenementHover, 2)
+  changementStyleMouseOver(evenementHover, 2, true)
 );
 section2Link[0].addEventListener("mouseout", (evenementHover) =>
-  test4(evenementHover, 0)
+  changementStyleMouseOut(evenementHover, 0, true)
 );
 section2Link[1].addEventListener("mouseout", (evenementHover) =>
-  test4(evenementHover, 1)
+  changementStyleMouseOut(evenementHover, 1, true)
 );
 section2VideoLink.addEventListener("mouseout", (evenementHover) =>
-  test4(evenementHover, 2)
+  changementStyleMouseOut(evenementHover, 2, true)
 );
+console.log(section2Link);
+for (let index = 0; index <= 6; index++) {
+  section7Link[index].addEventListener("mouseover", (evenementHover) =>
+    changementStyleMouseOver(evenementHover, index, false)
+  );
+  section7Link[index].addEventListener("mouseout", (evenementHover) =>
+    changementStyleMouseOut(evenementHover, index, false)
+  );
+}
