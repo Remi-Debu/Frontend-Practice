@@ -269,6 +269,41 @@ video {
     margin-bottom: 90px;
 }
 
+/* SECTION 6  */
+
+.section6 {
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section6 > div:nth-child(1) {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.section6 > div:nth-child(1) > h2 {
+    font-size: 6vw;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section6 > div:nth-child(1) > span {
+    font-size: 1.3vw;
+    margin-bottom: 80px;
+}
+
+.section6 > div:nth-child(1) > span > span {
+    font-weight: 800;
+}
+
+.section6 > div:nth-child(2) {
+    width: 50%;
+}
+
 /* SECTION 7 */
 
 .section7 {
@@ -291,6 +326,10 @@ video {
     width: 10%;
     font-size: 2.5rem;
     font-weight: 600;
+}
+
+.section7DivElement1 {
+    margin-top: 4rem !important;
 }
 
 .section7DivElement {
