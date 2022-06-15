@@ -4,6 +4,13 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #252422;
+    transition-duration: 1s;
+}
+
+.switchStyle {
+    background-color: #252422;
+    color: #f9cdcd;
+    transition-duration: 1s;
 }
 
 .sectionBtn {

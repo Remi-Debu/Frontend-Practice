@@ -1,3 +1,5 @@
+let body = document.querySelector("body");
+let link = document.querySelectorAll("a");
 let section2Link = document.querySelectorAll(".section2Div > a");
 let section2VideoLink = document.querySelector(".section2DivVideo > a");
 let section2h1 = document.querySelectorAll(".section2DivTexte > h1");
@@ -68,3 +70,14 @@ for (let index = 0; index <= 6; index++) {
     changementStyleMouseOut(evenementHover, index, false)
   );
 }
+
+const changementSyleScrollPosition = () => {
+  let scrollPosition = window.scrollY;
+  
+  if (scrollPosition > 3000 && scrollPosition < 4000) {
+    body.setAttribute("class", "switchStyle");
+  } else {
+    body.setAttribute("class", "");
+  }
+}
+window.addEventListener("scroll", changementSyleScrollPosition);
