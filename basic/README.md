@@ -10,7 +10,6 @@
 - Faire fonctionner le boutton du menu (navbar)
 - Animation hover boutton (See the work + View all)
 - Drag horizontal sur la section 5
-- Styliser la scrollbar horizontal de la section 5
 - Animation hover underline sur "biz@basicagency.com" dans le footer
 - Styliser l'input du footer
 - Media queries

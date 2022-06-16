@@ -247,6 +247,21 @@ video {
     overflow-x: scroll;
 }
 
+.section5::-webkit-scrollbar {
+    display: block;
+    height: 2px;
+}
+
+.section5::-webkit-scrollbar-track {
+    background-color: #9e9e9e;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.section5::-webkit-scrollbar-thumb {
+    background: #252422;
+}
+
 .section5 a {
     color: #252422;
 }
