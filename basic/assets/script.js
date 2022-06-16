@@ -1,5 +1,5 @@
 let body = document.querySelector("body");
-let link = document.querySelectorAll("a");
+
 let section2Link = document.querySelectorAll(".section2Div > a");
 let section2VideoLink = document.querySelector(".section2DivVideo > a");
 let section2h1 = document.querySelectorAll(".section2DivTexte > h1");
@@ -13,7 +13,7 @@ const changementStyleMouseOver = (evenementHover, nb, section2or7) => {
   evenementHover.preventDefault();
   evenementHover.stopPropagation();
 
-  if (section2or7 == true) {
+  if (section2or7 === true) {
     section2h1[nb].setAttribute("style", "text-decoration: underline;");
     if (nb != 2) {
       section2cadre[nb].setAttribute("style", "transform: scale(1);");
@@ -30,7 +30,7 @@ const changementStyleMouseOut = (evenementHover, nb, section2or7) => {
   evenementHover.preventDefault();
   evenementHover.stopPropagation();
 
-  if (section2or7 == true) {
+  if (section2or7 === true) {
     section2h1[nb].setAttribute("style", "text-decoration: none;");
     if (nb != 2) {
       section2cadre[nb].setAttribute("style", "transform: scale(1.09);");
@@ -74,10 +74,16 @@ for (let index = 0; index <= 6; index++) {
 const changementSyleScrollPosition = () => {
   let scrollPosition = window.scrollY;
   
-  if (scrollPosition > 3000 && scrollPosition < 4000) {
-    body.setAttribute("class", "switchStyle");
+  if (scrollPosition > 2800 && scrollPosition < 3600) {
+    body.setAttribute("class", "switchStyleBody");
+    for (let index = 0; index < section7h2.length; index++) {
+      section7h2[index].setAttribute("class", "switchStyleH2");
+    }
   } else {
     body.setAttribute("class", "");
+    for (let index = 0; index < section7h2.length; index++) {
+      section7h2[index].setAttribute("class", "");
+    }
   }
 }
 window.addEventListener("scroll", changementSyleScrollPosition);

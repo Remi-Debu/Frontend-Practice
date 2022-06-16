@@ -7,8 +7,13 @@ body {
     transition-duration: 1s;
 }
 
-.switchStyle {
+.switchStyleBody {
     background-color: #252422;
+    color: #f9cdcd;
+    transition-duration: 1s;
+}
+
+.switchStyleH2{
     color: #f9cdcd;
     transition-duration: 1s;
 }
@@ -184,7 +189,7 @@ video {
 }
 
 .section2cadreVideo {
-    width: 100%;
+    width: 101%;
     height: 80%;
 }
 
@@ -212,8 +217,14 @@ video {
 .section3>div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-top: 1px solid #252422;
-    padding-top: 20px;
+    padding-top: 15px;
+}
+
+.section3>div>div:nth-child(3) {
+    display: inline-block;
+    font-size: 1.6rem;
 }
 
 .section3_05 {
@@ -279,7 +290,7 @@ video {
 /* SECTION 6  */
 
 .section6 {
-    padding: 80px;
+    padding: 100px 80px 0 80px;
     display: flex;
     justify-content: space-between;
 }
@@ -307,6 +318,10 @@ video {
     font-weight: 800;
 }
 
+.section6 > div:nth-child(1) > a {
+    width: 55px;
+}
+
 .section6 > div:nth-child(2) {
     width: 50%;
 }
@@ -314,7 +329,6 @@ video {
 /* SECTION 7 */
 
 .section7 {
-    margin-top: 100px;
     padding: 80px;
 }
 
@@ -464,8 +478,8 @@ footer>div:nth-child(1)>div:nth-child(1)>p>a:hover::after {
 
 footer>div:nth-child(1)>div:nth-child(2) {
     margin-top: 100px;
-    font-size: 1.2rem;
-    line-height: 1.2;
+    font-size: 1.1rem;
+    line-height: 1.4;
     display: flex;
     justify-content: space-between;
 }
@@ -505,4 +519,11 @@ footer>div:nth-child(2) a {
 
 footer>div:nth-child(2) a:hover {
     text-decoration: underline;
+}
+
+footer h3::before {
+    display: inline-block;
+    content: "●";
+    margin-right: 10px;
+    font-size: 1.6rem;
 }
