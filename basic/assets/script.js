@@ -5,6 +5,9 @@ let section2VideoLink = document.querySelector(".section2DivVideo > a");
 let section2h1 = document.querySelectorAll(".section2DivTexte > h1");
 let section2cadre = document.querySelectorAll(".section2cadre");
 
+let section5 = document.querySelector(".section5");
+let cursor = document.querySelector(".cursor");
+
 let section7Link = document.querySelectorAll(".section7Link");
 let section7h2 = document.querySelectorAll(".section7DivDiv > h2");
 let section7img = document.querySelectorAll(".section7DivElement img");
@@ -61,7 +64,7 @@ section2Link[1].addEventListener("mouseout", (evenementHover) =>
 section2VideoLink.addEventListener("mouseout", (evenementHover) =>
   changementStyleMouseOut(evenementHover, 2, true)
 );
-console.log(section2Link);
+
 for (let index = 0; index <= 6; index++) {
   section7Link[index].addEventListener("mouseover", (evenementHover) =>
     changementStyleMouseOver(evenementHover, index, false)
@@ -73,7 +76,7 @@ for (let index = 0; index <= 6; index++) {
 
 const changementSyleScrollPosition = () => {
   let scrollPosition = window.scrollY;
-  
+
   if (scrollPosition > 2800 && scrollPosition < 3600) {
     body.setAttribute("class", "switchStyleBody");
     for (let index = 0; index < section7h2.length; index++) {
@@ -85,5 +88,18 @@ const changementSyleScrollPosition = () => {
       section7h2[index].setAttribute("class", "");
     }
   }
-}
+};
 window.addEventListener("scroll", changementSyleScrollPosition);
+
+const styleCursorSection5 = (eventCursor) => {
+  console.log(eventCursor);
+  cursor.setAttribute(
+    "style",
+    "display:block;top:" +
+      (eventCursor.y - 335) +
+      "px;left:" +
+      (eventCursor.x - 60) +
+      "px;"
+  );
+};
+section5.addEventListener("mousemove", styleCursorSection5);

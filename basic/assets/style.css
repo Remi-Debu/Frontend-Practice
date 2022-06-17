@@ -242,9 +242,29 @@ video {
 /* SECTION 5  */
 
 .section5 {
-    padding: 80px 0 80px 80px;
     display: flex;
+    position: relative;
     overflow-x: scroll;
+    padding: 80px 0 80px 80px;
+}
+
+.section5:hover {
+    cursor: none;
+}
+
+.cursor {
+    display: none;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    min-width: initial !important;
+    margin: 0 !important;
+    border-radius: 50%;
+    background-color: #f9cdcd;
+    text-align: center;
+    line-height: 120px;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .section5::-webkit-scrollbar {
@@ -267,9 +287,8 @@ video {
 }
 
 .section5>div {
-    width: 20vw;
-    min-width: 20vw;
-    margin-right: 100px;
+    min-width: 25vw;
+    margin-right: 150px;
 }
 
 .section5Ttitle {
@@ -436,7 +455,7 @@ footer>div:nth-child(1) {
     background-color: #252422;
 }
 
-footer figure {
+.footer__logo {
     width: 68px;
 }
 
@@ -500,7 +519,41 @@ footer>div:nth-child(1)>div:nth-child(2) {
 }
 
 footer>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) {
-    width: 50%;
+    width: 40%;
+}
+
+footer>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div {
+    display: flex;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.footerInput {
+    width: 100%;
+    border: none;
+    background: none;
+    color: #f4f4f4;
+    font-size: 1.1rem;
+}
+
+.footerInput:focus {
+    outline: none;
+}
+
+.footerInput::placeholder {
+    color: #f4f4f4;
+    font-size: 1.1rem;
+}
+
+footer>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) button {
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+footer>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) figure {
+    width: 20px;
+    fill: #f4f4f4;
 }
 
 footer>div:nth-child(1)>div:nth-child(2)>div:nth-child(2) {
