@@ -1,2 +1,2 @@
 # Frontend-Practice
-Liste de sites Web réels reproduit pour pratiquer le frontend.
+Reproduction de sites web pour pratiquer le frontend.
