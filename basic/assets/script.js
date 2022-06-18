@@ -79,11 +79,13 @@ const changementSyleScrollPosition = () => {
 
   if (scrollPosition > 2800 && scrollPosition < 3600) {
     body.setAttribute("class", "switchStyleBody");
+    section5.setAttribute("class", "section5 switchStyleSection5");
     for (let index = 0; index < section7h2.length; index++) {
       section7h2[index].setAttribute("class", "switchStyleH2");
     }
   } else {
     body.setAttribute("class", "");
+    section5.setAttribute("class", "section5");
     for (let index = 0; index < section7h2.length; index++) {
       section7h2[index].setAttribute("class", "");
     }
@@ -92,13 +94,12 @@ const changementSyleScrollPosition = () => {
 window.addEventListener("scroll", changementSyleScrollPosition);
 
 const styleCursorSection5 = (eventCursor) => {
-  console.log(eventCursor);
   cursor.setAttribute(
     "style",
     "display:block;top:" +
-      (eventCursor.y - 335) +
+      (eventCursor.pageY - 2594) +
       "px;left:" +
-      (eventCursor.x - 60) +
+      (eventCursor.pageX - 60) +
       "px;"
   );
 };

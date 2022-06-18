@@ -280,6 +280,12 @@ video {
 
 .section5::-webkit-scrollbar-thumb {
     background: #252422;
+    transition-duration: 1s;
+}
+
+.switchStyleSection5::-webkit-scrollbar-thumb {
+    background: #f9cdcd;
+    transition-duration: 1s;
 }
 
 .section5 a {
