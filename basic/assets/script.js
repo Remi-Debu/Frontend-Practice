@@ -94,13 +94,51 @@ const changementSyleScrollPosition = () => {
 window.addEventListener("scroll", changementSyleScrollPosition);
 
 const styleCursorSection5 = (eventCursor) => {
-  cursor.setAttribute(
-    "style",
-    "display:block;top:" +
-      (eventCursor.pageY - 2594) +
-      "px;left:" +
-      (eventCursor.pageX - 60) +
-      "px;"
-  );
+  if (eventCursor.pageY < 2400 || eventCursor.pageY > 3100) {
+    cursor.setAttribute(
+      "style",
+      "display:block;top:2700px;left:" +
+        (eventCursor.pageX - 60) +
+        "px;"
+    );
+  } else {
+    cursor.setAttribute(
+      "style",
+      "display:block;top:" +
+        (eventCursor.pageY - 60) +
+        "px;left:" +
+        (eventCursor.pageX - 60) +
+        "px;"
+    );
+  }
 };
 section5.addEventListener("mousemove", styleCursorSection5);
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+section5.addEventListener("mousedown", (e) => {
+  isDown = true;
+  section5.classList.add("active");
+  startX = e.pageX - section5.offsetLeft;
+  scrollLeft = section5.scrollLeft;
+});
+
+section5.addEventListener("mouseleave", () => {
+  isDown = false;
+  section5.classList.remove("active");
+});
+
+section5.addEventListener("mouseup", () => {
+  isDown = false;
+  section5.classList.remove("active");
+});
+
+section5.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - section5.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  section5.scrollLeft = scrollLeft - walk;
+});

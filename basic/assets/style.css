@@ -243,7 +243,6 @@ video {
 
 .section5 {
     display: flex;
-    position: relative;
     overflow-x: scroll;
     padding: 80px 0 80px 80px;
 }
